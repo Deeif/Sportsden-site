@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SportsDen</title>
+<meta name="description" content="SportsDen: free live scores and live win probability for every game, on one screen — built for your TV.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg viewBox="0 0 260 260" aria-hidden="true"><rect width="260" height="260" rx="64" fill="#c8ff2e"/><path d="M86 94 L130 52 L174 94 V126 H86 Z" fill="none" stroke="#06080c" stroke-width="12" stroke-linejoin="round"/><rect x="101" y="100" width="11" height="18" rx="3" fill="#06080c"/><rect x="120" y="91" width="11" height="27" rx="3" fill="#06080c"/><rect x="139" y="82" width="11" height="36" rx="3" fill="#06080c"/><g fill="#06080c"><rect x="62" y="142" width="136" height="46" rx="18"/><rect x="42" y="160" width="40" height="56" rx="16"/><rect x="178" y="160" width="40" height="56" rx="16"/><rect x="66" y="176" width="128" height="34" rx="10"/><rect x="60" y="212" width="12" height="14" rx="3"/><rect x="188" y="212" width="12" height="14" rx="3"/></g></svg>
+    <a class="wm" href="./">SPORTS<span>DEN</span></a>
+    <nav><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
+  </header>
+
+  <!-- Shown only when TikTok sends you back here after you approve the connection -->
+  <div id="connect" class="card hidden">
+    <h2 style="margin-top:0">TikTok connected — almost done</h2>
+    <p>Copy the <strong>full address</strong> from your browser's address bar and paste it into the setup script
+       (<code>tools/tiktok_auth.py</code>) that's waiting in your Terminal. You can close this tab afterwards.</p>
+  </div>
+
+  <h1>Every game.<br>One screen.</h1>
+  <p class="lead">SportsDen is a free live sports dashboard made for your TV: live scores and live win probability for
+  NFL, college football, NBA, NHL, MLB, golf, Champions League soccer and tennis — all on one board.</p>
+  <ul>
+    <li>Live scores that refresh every 10 seconds</li>
+    <li>Live win probability on every game card</li>
+    <li>An idle ticker that scrolls every live game in team colours</li>
+    <li>No account, no sign-up — just open it in a browser</li>
+  </ul>
+  <p>Follow us on TikTok for game-night clips.</p>
+
+  <footer>
+    <span>© 2026 SportsDen</span>
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</div>
+<script>
+  // TikTok's sign-in redirects here with ?code=...; show the helper message instead of a blank page.
+  if (new URLSearchParams(location.search).has('code')) document.getElementById('connect').classList.remove('hidden');
+</script>
+</body>
+</html>
